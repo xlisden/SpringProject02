@@ -5,9 +5,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.entity.Rol;
+import com.example.demo.entity.Usuario;
 import com.example.demo.service.IRolService;
 
 @Controller
@@ -26,5 +29,10 @@ public class RolController {
 		return "listRols";
 	}
 	
+	@PostMapping("/addrols")
+	public String addRols(@ModelAttribute(name = "rols") Rol rol) {
+		rolService.addRol(rol);
+		return "redirect:/rol/list";
+	}
 
 }

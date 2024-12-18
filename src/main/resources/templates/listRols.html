@@ -23,24 +23,18 @@
 		</tbody>
 	</table>
 	
-<!-- 	<form action="#" th:action="@{/user/addusers}" th:object="${user}" method="post" class="py-5"> -->
-<!-- 		<div class="row"> -->
-<!-- 			<div class="col-sm-4"> -->
-<!-- 				<div class="form-floating mb-3"> -->
-<!-- 					<input th:field="*{username}" type="text" id="floatingUsername" placeholder="username" class="form-control"> <p></p> -->
-<!-- 					<label for="floatingUsername">Username </label>  -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-4"> -->
-<!-- 				<div class="form-floating mb-3"> -->
-<!-- 					<input th:field="*{password}" type="password" id="floatingPassword" placeholder="password" class="form-control"> <p></p> -->
-<!-- 					<label for="floatingPassword">Password </label>  -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 		<input type="submit" value="Submit" class="btn btn-dark" style="background-color: #203673;"> -->
-<!-- <!-- 		<input type="submit" value="Submit" class="btn btn-dark" style="background-color: #203673;"> -->
-<!-- 	</form> -->
+	<form action="#" th:action="@{/rol/addrols}" th:object="${rol}" method="post" class="py-5">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="form-floating mb-3">
+					<input th:field="*{name}" type="text" id="floatingName" placeholder="name" class="form-control"> <p></p>
+					<label for="floatingName">Name </label> 
+				</div>
+			</div>
+		</div>
+		<input type="submit" value="Submit" class="btn btn-dark" style="background-color: #203673;">
+<!-- 		<input type="submit" value="Submit" class="btn btn-dark" style="background-color: #203673;">-->
+	</form>
 	
 </div>
 
