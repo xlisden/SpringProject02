@@ -20,15 +20,16 @@ public class UsuarioController {
 	@Qualifier("usuarioservice")
 	private IUsuarioService usuarioService;
 
-	@GetMapping("/list")
+	@GetMapping({"/list", "/", ""})
 	public ModelAndView listAllUsuarios() {
-		ModelAndView mav = new ModelAndView("list");
+		ModelAndView mav = new ModelAndView("listUsers");
 		mav.addObject("usuarios", usuarioService.listAllUsuario());
+		mav.addObject("user", new Usuario());
 		return mav;
 	}
 	
 	@PostMapping("/addusers")
-	public String postMethodName(@ModelAttribute(name = "users") Usuario usuario) {
+	public String addUsers(@ModelAttribute(name = "users") Usuario usuario) {
 		usuarioService.addUsuario(usuario);
 		return "redirect:/user/list";
 	}

@@ -6,7 +6,8 @@ import com.example.demo.entity.Usuario;
 
 public interface IUsuarioService {
 	
-	public abstract List<Usuario> listAllUsuario();
 	public abstract Usuario addUsuario(Usuario usuario);
+	public abstract List<Usuario> findAllUsuarioByUsername(String username);
+	public abstract List<Usuario> listAllUsuario();
 
 }
