@@ -13,27 +13,32 @@
 			<tr>
 				<th>Id</th>
 				<th>Name</th>
+				<th>Operations</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr th:each="rol:${rols}">
 				<td th:text="${rol.id}"></td>
 				<td th:text="${rol.name}"></td>
+				<td>
+					<a th:href="@{/rol/getrol(id=${rol.id})}" class="btn btn-warning"> Edit </a>
+					<a th:href="@{/rol/delete(id=${rol.id})}" onclick="return confirm('Do you wanna delete this register?')" class="btn btn-danger"> Delete </a>
+				</td>
 			</tr>
 		</tbody>
 	</table>
 	
-	<form action="#" th:action="@{/rol/addrols}" th:object="${rol}" method="post" class="py-5">
+	<form action="#" th:action="@{${isEdit} ? '/rol/editrol' : '/rol/addrols'}" th:object="${rol}" method="post" class="py-5">
 		<div class="row">
 			<div class="col-sm-4">
+				<input type="hidden" th:if="${isEdit}" th:field="*{id}">
 				<div class="form-floating mb-3">
 					<input th:field="*{name}" type="text" id="floatingName" placeholder="name" class="form-control"> <p></p>
 					<label for="floatingName">Name </label> 
 				</div>
 			</div>
 		</div>
-		<input type="submit" value="Submit" class="btn btn-dark" style="background-color: #203673;">
-<!-- 		<input type="submit" value="Submit" class="btn btn-dark" style="background-color: #203673;">-->
+		<input type="submit"  value="Submit" class="btn btn-dark" style="background-color: #203673;">
 	</form>
 	
 </div>

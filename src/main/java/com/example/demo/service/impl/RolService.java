@@ -26,6 +26,22 @@ public class RolService implements IRolService{
 	public Rol addRol(Rol rol) {
 		return rolRepository.save(rol);
 	}
+
+	@Override
+	public void deleteRol(int id) {
+		rolRepository.deleteById(id);
+	}
+
+	@Override
+	public Rol editRol(Rol rol) {
+		return rolRepository.save(rol);
+	}
+
+	@Override
+	public Rol getRol(int id) {
+		return rolRepository.findById(id).get();
+	}
+
 	
 
 }

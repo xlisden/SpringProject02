@@ -8,6 +8,9 @@ public interface IRolService {
 	
 	public abstract List<Rol> listAllRol();
 	public abstract Rol addRol(Rol rol);
+	public abstract void deleteRol(int id);
+	public abstract Rol getRol(int id);
+	public abstract Rol editRol(Rol rol);
 
 //	public abstract Usuario addUsuario(Usuario usuario);
 //	public abstract List<Usuario> findAllUsuarioByUsername(String username);
