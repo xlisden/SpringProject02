@@ -8,7 +8,33 @@
 <body>
 
 <div class="container py-5">
-	<table class="table">
+<!-- 	<form action="#" th:action="@{/rol/listbyname}" th:object="${rol}" method="post" > -->
+<!-- 		<div class="row justify-content-end"> -->
+<!-- 		<div class="col-4"> -->
+<!-- 			<div class="input-group mb-3"> -->
+<!-- 			  <input th:field="*{name}" type="text" class="form-control" placeholder="search by name" aria-describedby="button-addon2"> -->
+<!-- 			  <button  type="button" id="button-addon2" style="background-color: #203673;" class="btn btn-dark"> Search </button> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 		</div> -->
+<!-- 	</form> -->
+
+<!-- 	<input type="text"> -->
+<!-- 	<a th:href="@{/rol/listAllByUsername(name='a')}" class="btn btn-warning"> Edit </a> -->
+	
+	
+	<form action="" >
+		<div class="row justify-content-end">
+		<div class="col-4">
+			<div class="input-group mb-3">
+			  <input type="text" class="form-control" placeholder="search by name" aria-describedby="button-addon2">
+			  <button  type="button" id="button-addon2" style="background-color: #203673;" class="btn btn-dark"> Search </button>
+			</div>
+		</div>
+		</div>
+	</form>
+	
+	<table class="table mt-3">
 		<thead>
 			<tr>
 				<th>Id</th>
@@ -32,7 +58,7 @@
 		<div class="row">
 			<div class="col-sm-4">
 				<input type="hidden" th:if="${isEdit}" th:field="*{id}">
-				<div class="form-floating mb-3">
+				<div class="form-floating">
 					<input th:field="*{name}" type="text" id="floatingName" placeholder="name" class="form-control"> <p></p>
 					<label for="floatingName">Name </label> 
 				</div>

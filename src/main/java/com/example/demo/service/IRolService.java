@@ -3,6 +3,7 @@ package com.example.demo.service;
 import java.util.List;
 
 import com.example.demo.entity.Rol;
+import com.example.demo.entity.Usuario;
 
 public interface IRolService {
 	
@@ -11,8 +12,6 @@ public interface IRolService {
 	public abstract void deleteRol(int id);
 	public abstract Rol getRol(int id);
 	public abstract Rol editRol(Rol rol);
+//	public abstract List<Rol> findAllRolByName(String name);
 
-//	public abstract Usuario addUsuario(Usuario usuario);
-//	public abstract List<Usuario> findAllUsuarioByUsername(String username);
-//	public abstract List<Usuario> listAllUsuario();
 }

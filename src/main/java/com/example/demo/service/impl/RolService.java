@@ -42,6 +42,11 @@ public class RolService implements IRolService{
 		return rolRepository.findById(id).get();
 	}
 
+//	@Override
+//	public List<Rol> findAllRolByName(String name) {
+//		return rolRepository.findAllRolByName(name);
+//	}
+
 	
 
 }

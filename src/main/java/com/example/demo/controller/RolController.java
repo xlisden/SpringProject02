@@ -71,4 +71,12 @@ public class RolController {
 		return "redirect:/rol/list";
 	}
 	
+//	@GetMapping("/listbyname")
+//	public String listAllByUsername(@RequestParam String name, Model model) {
+//		isEdit = false;
+//		model.addAttribute("isEdit", isEdit);
+//		model.addAttribute("rol", new Rol());
+////		model.addAttribute("rols", rolService.findAllRolByName(name));
+//		return "listRols";
+//	}
 }
